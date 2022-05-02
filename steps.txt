@@ -1,0 +1,4 @@
+1. clone repo
+2. python -m venv venv 
+3. venv/scripts/activate on windows or source venv/bin/activate on linux
+3. pip install requirements.txt
