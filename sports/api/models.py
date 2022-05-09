@@ -223,6 +223,12 @@ class Preview(models.Model):
     linest_under = models.DecimalField(max_digits=16, decimal_places=2, blank=True, null=True)
     linest_fave = models.DecimalField(max_digits=16, decimal_places=2, blank=True, null=True)
     linest_dog = models.DecimalField(max_digits=16, decimal_places=2, blank=True, null=True)
+
+     
+    linest_away_fave = models.DecimalField(max_digits=16, decimal_places=2, blank=True, null=True)
+    linest_away_dog = models.DecimalField(max_digits=16, decimal_places=2, blank=True, null=True)
+    linest_home_fave = models.DecimalField(max_digits=16, decimal_places=2, blank=True, null=True)
+    linest_home_dog = models.DecimalField(max_digits=16, decimal_places=2, blank=True, null=True)
     buch_match_h_hist = models.DecimalField(max_digits=16, decimal_places=2, blank=True, null=True)
     buch_match_a_hist= models.DecimalField(max_digits=16, decimal_places=2, blank=True, null=True)
     blind_home_hist= models.DecimalField(max_digits=16, decimal_places=2, blank=True, null=True)
