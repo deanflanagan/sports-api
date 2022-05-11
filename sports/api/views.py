@@ -64,6 +64,24 @@ def get_preview(request, match_id):
         raise Http404("No games upcoming")
     return JsonResponse(PreviewSerializer(preview).data)
 
+def get_game_test(request, game_id):
+    try:
+        game = Game.objects.get(pk=game_id)
+        # print(game.match_id)
+        preview = Preview.objects.filter(match_id=game.match_id).latest('match_id')
+    except Preview.DoesNotExist:
+        raise Http404("No preview for this game")
+    return JsonResponse({game_id:PreviewSerializer(preview).data}, safe=False)
+
+def get_game_test_array(request, game_id):
+    try:
+        game = Game.objects.get(pk=game_id)
+        # print(game.match_id)
+        preview = Preview.objects.filter(match_id=game.match_id).latest('match_id')
+    except Preview.DoesNotExist:
+        raise Http404("No preview for this game")
+    return JsonResponse([{game_id:PreviewSerializer(preview).data}], safe=False)
+
 def get_game(request, game_id):
     try:
         game = Game.objects.get(pk=game_id)
