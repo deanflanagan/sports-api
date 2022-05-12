@@ -13,9 +13,9 @@ router.register('bets', views.BetViewSet, basename='bets')
 urlpatterns = [
     path('upcoming', views.upcoming_matches, name='upcoming'),
     path('game/<int:game_id>/', views.get_game, name='get_game'),
-    path('game/<int:game_id>/preview', views.get_game_preview, name='get_game_preview'),
-        # path('game/<int:game_id>/test', views.get_game_test, name='get_game_test'),
-        # path('game/<int:game_id>/test_array', views.get_game_test_array, name='get_game_test_array'),
+    # path('game/<int:game_id>/preview-all', views.get_game_preview, name='get_game_preview'),
+    path('game/<int:game_id>/preview-all', views.get_game_preview_all, name='get_game_preview_all'),
+    path('game/<int:game_id>/preview-levels', views.get_game_preview_levels, name='get_game_preview_levels'),
 
     path('game/<int:game_id>/placeholder', views.get_game_placeholder, name='get_game_placeholder'),
     path('game/<int:game_id>/league', views.get_game_league, name='get_game_league'),
