@@ -138,3 +138,26 @@ class BetViewSet(viewsets.ModelViewSet):
         return Response(data="return data")
     serializer_class = BetSerializer
 
+def team_plot_venues(request,game_id ):
+
+    return JsonResponse({"data":"lots of data"})
+
+def team_plot_fave_dog(request,game_id ):
+
+    return JsonResponse({"data":"lots of data"})
+
+def team_plot_home_fave_dog(request,game_id ):
+
+    return JsonResponse({"data":"lots of data"})
+
+def opposition_plot_venues(request,game_id ):
+
+    return JsonResponse({"data":"lots of data"})
+
+def opposition_plot_fave_dog(request,game_id ):
+
+    return JsonResponse({"data":"lots of data"})
+
+def opposition_plot_away_fave_dog(request,game_id ):
+
+    return JsonResponse({"data":"lots of data"})
