@@ -1,0 +1,6 @@
+    'game/<int:game_id>/team-plot-venues', {game.team} at each venue
+    'game/<int:game_id>/team-plot-fave-dog',  {game.team} fave/dog all venues
+    'game/<int:game_id>/team-plot-home-fave-dog', {game.team} @ home fave/dog
+    'game/<int:game_id>/opposition-plot-venues', {game.opposition} at each venue
+    'game/<int:game_id>/opposition-plot-fave-dog', {game.opposition} fave/dog all venues
+    'game/<int:game_id>/opposition-plot-away-fave-dog',{game.opposition} @ away fave/dog
