@@ -22,7 +22,9 @@ def upcoming_matches(request):
         'league':match.league,
         'league_id':match.league_id,
         'preview':match.team + " vs. "+ match.opposition,
-        'start_time': match.start_time}
+        'start_time': match.start_time,
+        'team':match.team,
+        'opposition':match.opposition}
         )
 
     return JsonResponse(sorted(output, key=lambda d: d['start_time']) , safe=False)
